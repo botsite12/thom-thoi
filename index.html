@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dime – Mod Trung Thu cho Minecraft</title>
+<meta name="description" content="Dime là mod Minecraft chủ đề Trung Thu: kiếm bay, kiếm sữa tươi, boss Lân Vương Trăng Rằm. Tải miễn phí.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--night:#14162a;--night2:#1d2040;--moon:#fff3c8;--gold:#f5c150;--lantern:#d6283a;--leaf:#5fcf72;--text:#ece8f5;--mute:#a8a6c4;
+--serif:"Playfair Display",Georgia,"Times New Roman",serif;--sans:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--night);color:var(--text);font:400 1.05rem/1.7 var(--sans);padding-top:env(safe-area-inset-top)}
+img{max-width:100%;display:block}a{color:var(--gold)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1080px,92vw);margin:0 auto}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+nav b{font:800 1.5rem var(--serif);color:var(--moon)}nav div{display:flex;gap:22px}nav a{color:var(--text);text-decoration:none;font-weight:500}nav a:hover{color:var(--gold)}
+.hero{position:relative;overflow:hidden;padding:30px 0 80px;background:radial-gradient(1px 1px at 12% 20%,#fff,transparent),radial-gradient(1.5px 1.5px at 78% 12%,#fff,transparent),radial-gradient(1px 1px at 55% 35%,#fff9,transparent),radial-gradient(1.5px 1.5px at 90% 60%,#fff,transparent),radial-gradient(1px 1px at 30% 70%,#fff9,transparent),linear-gradient(#14162a,#1d2040)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;position:relative}
+.moon{position:absolute;right:-6%;top:-4%;width:min(520px,70vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 38% 36%,#fffbe6,var(--moon) 55%,#e9c978);box-shadow:0 0 120px 30px #f5c15055}
+.hero h1{font:800 clamp(2.6rem,7vw,4.6rem)/1.05 var(--serif);margin:.2em 0 .3em;color:var(--moon)}
+.hero p.lead{font-size:1.2rem;max-width:34ch;color:var(--text)}
+.hero figure{margin:0;position:relative;z-index:1}
+.hero figure img{filter:drop-shadow(0 20px 30px #0008);animation:fly 5s ease-in-out infinite}
+@keyframes fly{50%{transform:translateY(-14px) rotate(1.5deg)}}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:700;text-decoration:none;background:var(--lantern);color:#fff;border:2px solid var(--gold);box-shadow:0 6px 0 #8c1424;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(3px);box-shadow:0 3px 0 #8c1424}
+.btn.ghost{background:transparent;box-shadow:none;color:var(--moon);border-color:var(--mute)}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin:22px 0 0;padding:0;list-style:none;color:var(--mute);font-size:.95rem}
+.facts b{color:var(--text)}
+section{padding:70px 0}
+h2{font:800 clamp(1.8rem,4vw,2.5rem)/1.15 var(--serif);color:var(--moon);margin:0 0 .4em}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin:54px 0}
+.row:nth-child(even) .pic{order:2}
+.pic{background:var(--night2);border:2px solid #34386a;border-radius:18px;padding:12px}
+.row h3{font:700 1.7rem var(--serif);margin:0 0 .3em;color:var(--gold)}
+.row ul{padding-left:1.1em;color:var(--text)}.row li{margin:.25em 0}
+.drops{background:var(--night2);border-radius:18px}
+.items{display:flex;flex-wrap:wrap;gap:28px;margin-top:24px}
+.items div{display:flex;gap:14px;align-items:center;max-width:300px}
+.items img{width:56px;height:56px;image-rendering:pixelated;flex:none}
+.items b{display:block}.items span{color:var(--mute);font-size:.95rem;line-height:1.4}
+ol.steps{padding:0;margin:20px 0 0;list-style:none;counter-reset:s;display:grid;gap:14px;max-width:720px}
+ol.steps li{counter-increment:s;padding:14px 18px 14px 62px;position:relative;background:var(--night2);border-radius:14px}
+ol.steps li:before{content:counter(s);position:absolute;left:16px;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;background:var(--gold);color:#14162a;font-weight:800;display:grid;place-items:center}
+details{background:var(--night2);border-radius:12px;padding:14px 18px;margin:10px 0;max-width:720px}summary{cursor:pointer;font-weight:700}
+footer{padding:36px 0 50px;text-align:center;color:var(--mute);border-top:1px solid #2a2d55;font-size:.95rem}
+@media(max-width:800px){.hero .wrap,.row{grid-template-columns:1fr}.row:nth-child(even) .pic{order:0}.moon{right:-30%}nav div{gap:14px}}
+@media(prefers-reduced-motion:reduce){.hero figure img{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="hero">
+<div class="moon" aria-hidden="true"></div>
+<div class="wrap">
+<nav style="grid-column:1/-1"><b>Dime</b><div><a href="#noi-dung">Nội dung</a><a href="#cai-dat">Cách cài</a><a href="#hoi-dap">Hỏi đáp</a></div></nav>
+<div>
+<h1>Dime: mod Trung Thu cho Minecraft</h1>
+<p class="lead">Cầm thanh kiếm bay đỏ vàng, uống sữa tươi lấy sức, rồi đấu với Lân Vương Trăng Rằm dưới ánh trăng.</p>
+<div class="btns"><a class="btn" data-dl href="#">Tải mod (.jar)</a><a class="btn ghost" data-repo href="#">Xem trên GitHub</a></div>
+<ul class="facts"><li>Minecraft <b data-mc>1.21.1</b></li><li>Bộ nạp <b data-loader>NeoForge</b></li><li>Phiên bản <b data-ver>1.0.0</b></li></ul>
+</div>
+<figure><img src="assets/kiem-trung-thu.png" alt="Kiếm Trung Thu Bay: lưỡi xanh, cán vàng, tua rua đỏ và ngôi sao 5 cánh"></figure>
+</div>
+</header>
+
+<main id="noi-dung" class="wrap">
+<section>
+<h2>Có gì trong mod</h2>
+<div class="row"><div class="pic"><img src="assets/kiem-trung-thu.png" alt="Kiếm Trung Thu Bay" loading="lazy"></div>
+<div><h3>Kiếm Trung Thu Bay</h3><p>Thanh kiếm lơ lửng với tay cầm hình trăng khuyết, tua rua đỏ và đuôi hình đèn ông sao.</p>
+<ul><li>Lưỡi sáng như ánh trăng, chuôi bọc lụa đỏ</li><li>Có bộ chuyển động riêng: lơ lửng, chém, đâm, xoay</li></ul></div></div>
+<div class="row"><div class="pic"><img src="assets/kiem-sua.png" alt="Kiếm Sữa Tươi TH" loading="lazy"></div>
+<div><h3>Kiếm Sữa Tươi TH</h3><p>Lưỡi trắng sữa, chuôi hoa văn bò sữa, đuôi là chai sữa nắp xanh. Mang tông xanh trắng của đồng cỏ.</p>
+<ul><li>Sát thương cao, độ bền lớn</li><li>Lấy cảm hứng từ sữa tươi sạch</li></ul></div></div>
+<div class="row"><div class="pic"><img src="assets/lan-vuong.png" alt="Boss Lân Vương Trăng Rằm" loading="lazy"></div>
+<div><h3>Boss Lân Vương Trăng Rằm</h3><p>Con sư tử múa lân khổng lồ cao hơn 4 khối: bờm lửa, một sừng vàng, râu trắng và đèn ông sao trên lưng.</p>
+<ul><li>Có thanh máu boss</li><li>Rơi Bánh Trung Thu khi bị hạ</li></ul></div></div>
+</section>
+<section class="drops" style="padding:34px 28px;margin-bottom:40px">
+<h2>Vật phẩm</h2>
+<div class="items">
+<div><img src="assets/banh_trung_thu.png" alt=""><p><b>Bánh Trung Thu</b><span>Vật phẩm rơi từ boss.</span></p></div>
+<div><img src="assets/manh_trang.png" alt=""><p><b>Mảnh Trăng</b><span>Mảnh trăng khuyết vàng.</span></p></div>
+<div><img src="assets/cau_trang.png" alt=""><p><b>Cầu Trăng</b><span>Quả cầu ánh trăng làm đạn.</span></p></div>
+</div></section>
+
+<section id="cai-dat">
+<h2>Cách cài mod</h2>
+<ol class="steps">
+<li>Cài Minecraft <b data-mc>1.21.1</b> và <b data-loader>NeoForge</b> cho đúng phiên bản.</li>
+<li>Bấm <a data-dl href="#">Tải mod (.jar)</a>. File nằm ở mục Releases trên GitHub.</li>
+<li>Cài thêm mod GeckoLib (cho hoạt ảnh của kiếm và boss) bản hợp với Minecraft của bạn.</li>
+<li>Chép các file .jar vào thư mục <b>mods</b> của Minecraft rồi chạy game.</li>
+</ol>
+</section>
+
+<section id="hoi-dap">
+<h2>Hỏi đáp</h2>
+<details><summary>Thư mục mods ở đâu?</summary><p>Trên Windows, bấm Win+R, gõ <b>%appdata%\.minecraft</b> rồi mở thư mục <b>mods</b>. Chưa có thì tạo mới.</p></details>
+<details><summary>Game báo thiếu mod khác?</summary><p>Hãy kiểm tra đã cài GeckoLib đúng bản chưa, và NeoForge đúng phiên bản Minecraft.</p></details>
+<details><summary>Báo lỗi ở đâu?</summary><p>Mở mục Issues trên trang GitHub và mô tả lỗi kèm phiên bản bạn dùng.</p></details>
+</section>
+</main>
+<footer><div class="wrap">Dime là mod fan làm, không liên quan đến Mojang hay Microsoft. Minecraft là nhãn hiệu của Mojang.</div></footer>
+<script>
+/* SỬA Ở ĐÂY: đổi thông tin mod của bạn */
+const CONFIG={github:"https://github.com/TEN_CUA_BAN/TEN_REPO",mc:"1.21.1",loader:"NeoForge",version:"1.0.0"};
+const $=s=>document.querySelectorAll(s);
+$("[data-dl]").forEach(a=>a.href=CONFIG.github+"/releases/latest");
+$("[data-repo]").forEach(a=>a.href=CONFIG.github);
+$("[data-mc]").forEach(e=>e.textContent=CONFIG.mc);
+$("[data-loader]").forEach(e=>e.textContent=CONFIG.loader);
+$("[data-ver]").forEach(e=>e.textContent=CONFIG.version);
+</script>
+</body>
+</html>
